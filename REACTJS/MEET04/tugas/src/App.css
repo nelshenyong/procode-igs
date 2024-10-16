@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+div.logo {
+  width: 84px;
+  height: 36px;
+  background-image: url(assets/disney_logo_dark-baa807690db7.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  margin-right: 2vh;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  padding: 1px;
+  text-decoration: none;
+  font-size: 1.8vh;
+  font-weight: 650;
+  margin-right: 3vh;
+}
+
+nav a:hover {
+  background-color: #444;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+  background-color: #136778;
+}
+.tag a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 15px;
+}
+.logo-tag {
+  width: 90px;
+  height: 26px;
+  background-image: url(assets/index/logo_wo_bg_500x144_-_long_d662aea9.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner {
+  width: 100%;
+  height: 70vh;
+  background-image: url(assets/index/bg-banner.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.banner .logo-banner {
+  width: 204px;
+  height: 121px;
+  background-image: url(assets/index/au_insideout2_lg_1_7870fa28.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 1vh;
+}
+
+.banner p {
+  font-size: 1.8vh;
+}
+
+.banner a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.8vh;
+  margin-top: 3vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #1cd4e8;
+  border-radius: 30px;
+}
+.movie-title {
+  font-size: 3.5vh;
+  margin-left: 13vh;
+}
+
+.container-movie {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 13vh;
+  padding-right: 13vh;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+}
+
+.movie-item {
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-one {
+  background-image: url("assets/movie/tayang_tidalwave_fight_localized_742x1100_da1d8b60.jpeg");
+}
+
+.movie-two {
+  background-image: url("assets/movie/sea-mufasa-scar-teaser-id_878a0d09.jpeg");
+}
+
+.movie-three {
+  background-image: url("assets/movie/dated_d00ba883.jpeg");
+}
+
+.movie-four {
+  background-image: url("assets/movie/undated_30349436.jpeg");
+}
+
+.movie-five {
+  background-image: url("assets/movie/di_bioskop_22_november_2023_8005c21f.jpeg");
+}
+
+.movie-six {
+  background-image: url("assets/movie/56245l15_goat_indonesia_apac_poster_1sht_f6a2a3d0.jpeg");
+}
+
+.movie-seven {
+  background-image: url("assets/movie/hauntedmansion-teaser-poster_7416df9c.jpeg");
+}
+
+.movie-eight {
+  background-image: url("assets/movie/id-guardiansofthegalaxy-vol3-payoffposter_6ba5c28b.jpeg");
+}
+
+.movie-nine {
+  background-image: url("assets/movie/sgph_-_ij5_poster_0000_01_plt_intlpayoff_1sht_eng-min_f7f36980.jpeg");
+}
+
+.movie-ten {
+  background-image: url("assets/movie/ant-man-andthewasp-poster-en_72ef8798.jpeg");
+}
+
+.movie-eleven {
+  background-image: url("assets/movie/elemental-poster-id_8425eb19.jpeg");
+}
+
+.movie-twelve {
+  background-image: url("assets/movie/poster-id-payoff_ce62087b.jpeg");
+}
+
+.movie-item-p {
+  font-size: 13px;
+  color: #333;
+}
+
+.banner-cruise {
+  width: 100%;
+  height: 70vh;
+  background-image: url(assets/cruise/desktop_2048x878_without_shade_06_june_85f3e6bd.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 10%;
+}
+
+.logo-banner-cruise {
+  width: 386px;
+  height: 121px;
+  background-image: url(assets/cruise/adventure_logo_900x285_1f85ed67.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+.box.left {
+  width: 50%;
+}
+
+.box.right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box.right p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.box.right button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.box.right button:hover {
+  background-color: #ccc;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+}
+
+div.logo-footer {
+  width: 56px;
+  height: 24px;
+  background-image: url(assets/disney_logo_dark-baa807690db7.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  margin-right: 2vh;
+}
+
+footer a {
+  color: rgb(93, 93, 93);
+  padding: 1px;
+  text-decoration: none;
+  font-size: 1.4vh;
+  margin-right: 3vh;
+}
+
+footer p {
+  color: rgb(93, 93, 93);
+  padding: 1px;
+  text-decoration: none;
+  font-size: 1.4vh;
+  margin-right: 3vh;
+  margin-top: 2vh;
+}
