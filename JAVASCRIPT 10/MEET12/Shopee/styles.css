@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 200vh;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+header.top-header {
+  position: sticky;
+  top: 0;
+}
+
+header.top-header div.header-container {
+  background: linear-gradient(-180deg, #f53d2d, #f63);
+  color: red;
+  height: 150px;
+  position: sticky;
+  width: 100%;
+  gap: 100px;
+  top: 0;
+}
+
+header.top-header div.header-container nav div.left-nav {
+  float: left;
+}
+
+header.top-header div.header-container nav div.right-nav {
+  float: right;
+}
+
+header.top-header div.header-container nav .nav-item {
+  color: white;
+  text-decoration: none;
+  line-height: 10px;
+  font-size: 13px;
+  margin-left: 14px;
+  padding: 0;
+}
+
+header.top-header div.header-container nav .nav-right-text {
+  margin-left: 5px;
+  margin-right: 14px;
+}
+
+header.top-header div.header-container nav .after::after {
+  content: "|";
+  margin-left: 14px;
+  font-weight: normal;
+}
+
+header.top-header div.header-container nav .bold {
+  font-weight: bold;
+}
+
+header.top-header div.header-container nav div.sidebar {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+header.top-header div.header-container nav div.sidebar div.logo-group {
+  margin-left: -200px;
+}
+
+header.top-header div.header-container nav div.sidebar div.search-group {
+  margin-left: -200px;
+}
+
+header.top-header div.header-container nav div.sidebar div.logo-img {
+  height: 50px;
+  width: 530px;
+  background-image: url(assets/20240313_082110.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+header.top-header div.header-container nav div.sidebar div.search-group {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+header.top-header div.header-container nav div.sidebar form {
+  padding: -30px;
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  height: 36px;
+}
+
+header.top-header div.header-container nav div.sidebar form input.search-input {
+  width: 800px;
+  padding: 5px 10px;
+  height: 36px;
+  border: 10px solid white;
+}
+
+.header-container .search-group .bar form .button-group {
+  display: flex;
+  align-items: center;
+}
+
+.header-container .search-group .bar form .button-group .search-btn {
+  border: none;
+  background-color: #fb5533;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  border: 5px solid white;
+}
+
+.header-container .search-group .bar form .button-group .cart {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+header.top-header
+  div.header-container
+  nav
+  div.sidebar
+  div.search-group
+  div.under-banner {
+  text-align: center;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  margin-right: 12px;
+  margin-top: -15px;
+}
+
+header.top-header
+  div.header-container
+  nav
+  div.sidebar
+  div.search-group
+  div.under-banner
+  a {
+  text-decoration: none;
+  color: white;
+  font-size: 11.7px;
+  margin-right: 5px;
+}
+
+div.clear {
+  clear: both;
+}
+
+.content-box1 {
+  grid-area: menu;
+}
+
+.content-box2 {
+  grid-area: main;
+}
+
+.content-box3 {
+  grid-area: footer;
+}
+
+.content-container {
+  display: grid;
+  grid-template-areas:
+    "menu main main"
+    "menu footer footer";
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.content-box1 {
+  height: 260px;
+  width: 650px;
+  margin-right: 4.7px;
+}
+
+img.photo1 {
+  height: 260px;
+  width: 650px;
+}
+
+img.photo2 {
+  height: 127.85px;
+}

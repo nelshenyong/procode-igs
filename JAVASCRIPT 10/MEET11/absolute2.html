@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolute 2</title>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        left: 100px;
+        background-color: red;
+      }
+
+      .abs-box {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to left, black, hotpink, gray);
+      }
+    </style>
+  </head>
+  <body>
+    <body>
+      <div class="container">
+        <div class="abs-box"></div>
+      </div>
+    </body>
+  </body>
+</html>

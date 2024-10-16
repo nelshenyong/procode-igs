@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlibs</title>
+</head>
+<body>
+    <h1>
+        Lovel is a <span id="one">?</span> <span id="two">?</span>.
+    </h1>
+
+    <script>
+        let adjective = ["ugly", "crazy", "pretty", "lazy"]
+        let animals = ["cat", "dog", "duck", "lizard"];
+        let randomIndex = Math.floor(Math.random()*adjective.length);
+        let randomIndex1 = Math.floor(Math.random()*animals.length);
+        // console.log(animals(randomIndex));
+        document.getElementById("one").innerHTML = adjective[randomIndex];
+        document.getElementById("two").innerHTML = animals[randomIndex1];
+    </script>
+</body>
+</html>

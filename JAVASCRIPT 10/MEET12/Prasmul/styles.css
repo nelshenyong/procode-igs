@@ -1,0 +1,478 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 200vh;
+  background-color: #00376a;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  background-color: aqua;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* HEADER */
+
+header .container {
+  justify-content: space-between;
+  height: 60px;
+  background-color: #00376a;
+}
+
+header .container .flags a {
+  display: flex;
+  text-decoration: none;
+  width: 17px;
+  gap: 20px;
+}
+
+header .container .nav-header {
+  width: 490px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container a {
+  font-size: 13px;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: gray;
+}
+
+header .container .nav-header a.btn {
+  display: inline-block;
+  background-color: rgb(61, 177, 102);
+  color: white;
+  font-weight: bold;
+  padding: 0 5px;
+  height: 60px;
+  width: 120px;
+  line-height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* STICKY NAV */
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+}
+
+nav .container {
+  justify-content: space-between;
+  height: 91px;
+  background-color: white;
+}
+
+nav .container ul.sticky-nav li.item {
+  display: inline-block;
+  list-style: none;
+  font-size: 15px;
+  color: #163269;
+  margin-left: 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+/* SECTION HERO */
+section.hero {
+  height: calc(130vh - 60px - 91px);
+  background-color: yellowgreen;
+  background-image: url("assets/Web-banner-S2-AskPrasmul-Maret-Universitas-Prasetiya-Mulya.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+section.hero .container {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* SECTION FACULTY */
+section.faculty {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 255px;
+  background-color: salmon;
+  padding: 0px;
+}
+
+section.faculty div.item-faculty {
+  display: flex;
+  background-image: url(assets/Gedung-PMBS-Universitas-Prasetiya-Mulya.webp);
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+section.faculty div.box-3 {
+  background-image: url(assets/Collaborative-STEM-Laboratories-Universitas-Prasetiya-Mulya.png);
+  background-position: center;
+  background-size: cover;
+}
+
+section.faculty div.box-4 {
+  background-image: url(assets/Gedung-Cilandak-2-Universitas-Prasetiya-Mulya-scaled.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+section.faculty div.item-faculty div.box-faculty {
+  background-color: #00376a;
+  display: flex;
+  width: 220px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+section.faculty div.item-faculty div.box-faculty img {
+  width: 200px;
+}
+
+/* SECTION ABOUT */
+section.about {
+  height: 300px;
+  background-color: #00376a;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.about .left img {
+  width: 100px;
+  margin-left: 350px;
+  margin-top: 60px;
+}
+
+section.about .left h3 {
+  margin-left: 350px;
+  margin-right: 50px;
+  color: white;
+}
+
+section.about .right h1 {
+  margin-top: 60px;
+  margin-right: 350px;
+  color: white;
+}
+
+section.about .right p {
+  margin-right: 430px;
+  color: white;
+  font-size: 8px;
+}
+
+section.about .right a {
+  color: white;
+  font-size: 7px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTION FLOATING IMG */
+section.floating-img {
+  position: relative;
+  top: 30px;
+  height: 190px;
+  width: 80%;
+  background-image: url(assets/Gedung-Universitas-Prasetiya-Mulya-crop.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  z-index: 998;
+}
+
+/* SECTION VIDEO UNI */
+section.video-uni {
+  position: relative;
+  height: 673px;
+  background-image: url(assets/Gedung-Universitas-Prasetiya-Mulya-edited-scaled.jpg);
+  background-size: cover;
+  background-position: center;
+}
+section.video-uni .container.video-text {
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0);
+  opacity: 0.5;
+}
+section.video-uni .container.text {
+  position: absolute;
+  height: 673px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+section.video-uni .container.text a {
+  color: white;
+  font-size: 130px;
+}
+section.video-uni .container.text h1 {
+  margin-top: -60px;
+  color: white;
+}
+section.video-uni .container.text h3 {
+  color: white;
+  margin-top: -20px;
+}
+
+/* SECTION REGISTER */
+section.register {
+  justify-content: space-between;
+  display: flex;
+  background-color: aqua;
+  height: 575px;
+}
+
+section.register .left {
+  background-image: url(assets/Graduated-Universitas-Prasetiya-Mulya.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+
+section.register .right {
+  background-image: url(assets/Gedung-eka-tjipta-widjaja-Universitas-Prasetiya-Mulya-edited.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+section.register .right span {
+  font-size: 28px;
+  font-weight: bold;
+}
+section.register .right h4 {
+  color: #339966;
+}
+
+section.register .right p {
+  font-size: 18px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+section.register .right a {
+  margin-top: 50px;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding-left: 31px;
+  padding-right: 29px;
+  padding-top: 12px;
+  padding-bottom: 17px;
+  background-color: #3db166;
+}
+
+/* FEATURES */
+section.features-container {
+  background-color: #1e1e1e;
+}
+
+section.features {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #1e1e1e;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-bottom: 100px;
+}
+
+section.features .features-item {
+  flex: 1 1 calc(33.333% - 20px);
+  margin: 10px;
+  border-radius: 8px;
+  margin-top: 10%;
+}
+
+section.features .features-item i {
+  color: gray;
+  font-size: 40px;
+}
+
+section.features .features-item h3 {
+  color: white;
+  margin-top: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+section.features .features-item p {
+  margin-top: 20px;
+  color: white;
+  max-height: 200px;
+}
+
+section.features .features-item a {
+  color: #60c988;
+  text-decoration: none;
+}
+
+/* NEWS */
+section.news .header {
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+section.news .header h1 {
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+section.news .header a {
+  text-decoration: none;
+  color: white;
+}
+
+section.news .news-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 150px;
+  gap: 30px;
+}
+
+section.news .news-container .news-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7em;
+}
+
+section.news .news-container .news-item img {
+  width: 100%;
+}
+
+section.news .news-container .news-item span {
+  letter-spacing: 2px;
+  color: gray;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+section.news .news-container .news-item h1 {
+  color: white;
+}
+
+/* FOOTER */
+footer .top {
+  background-image: url(assets/Rectangle-5-2.png);
+  background-position: center;
+  background-size: cover;
+}
+
+footer .top .container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2195f300;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+footer .top .container .items {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .top .container .items h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+footer .top .container .items hr {
+  height: 2px;
+  background-color: white;
+  border: none;
+  margin: 10px 0;
+}
+
+footer .top .container .box-3 .socials img {
+  width: 100px;
+}
+
+footer .top .container .box-3 .socials a {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+footer .bottom {
+  display: flex;
+  justify-content: center;
+}
+
+footer .bottom span {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+footer section.nav-buttons {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 150px;
+  font-size: 40px;
+  padding: 5px;
+}
+footer section.nav-buttons a.go-to-top-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  background-color: rgb(161, 160, 160);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  margin-bottom: 5px;
+}
+footer section.nav-buttons a.wa-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 50%;
+  background-color: rgb(126, 243, 68);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+}

@@ -1,0 +1,91 @@
+/* Reset some styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the base font size for the document */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Style the header */
+header {
+    background-color: #003b64;
+    padding: 1rem;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+header p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Style the navigation */
+nav {
+    background-color: #f2f2f2;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003b64;
+    padding: 0.5rem;
+}
+
+nav ul li a:hover {
+    background-color: #003b64;
+    color: #ffffff;
+}
+
+/* Style the main content */
+main {
+    padding: 2rem;
+}
+
+main h2 {
+    color: #003b64;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main p {
+    color: #666666;
+    margin-bottom: 1rem;
+}
+
+main a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #003b64;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+main a:hover {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;;
+}
+
+main img { width: 100%; max-width: 300px; margin-top: 1rem; }
+
+/* Style the footer */ footer { background-color: #f2f2f2; padding: 1rem; text-align: center; }
+
+footer p { color: #666666; margin-top: 1rem; }
+
+/* Media queries for responsiveness */ @media (max-width: 768px) { nav ul { flex-direction: column; }
+
+nav ul li { text-align: center; } }

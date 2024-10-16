@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 0;
+        padding-top: 25px;
+        padding-bottom: 10px;
+        margin: 0;
+        background-color: rgb(238, 169, 50);
+      }
+
+      .navbar ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+      }
+
+      .navbar li {
+        margin-right: 10px;
+      }
+
+      .navbar li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        transition: ease-in 0.1s;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .circle {
+        margin-left: 150vh;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid black;
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        background-color: rgb(255, 255, 255);
+        transition: ease-in 0.1s;
+      }
+
+      .circle.dark {
+        background-color: rgb(37, 40, 59);
+      }
+
+      .circle span#icon::after {
+        content: "⚫";
+      }
+      .circle span#icon.dark::after {
+        content: "⚪";
+      }
+
+      body {
+        background-color: rgb(255, 203, 70);
+        transition: ease-in 0.1s;
+      }
+
+      body.dark {
+        background-color: rgb(24, 29, 49);
+        color: white;
+      }
+
+      .banner {
+        background-color: blueviolet;
+        background-image: url(assets/images.jpeg);
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        
+      }
+
+      .about {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 25vh;
+        padding-right: 25vh;
+        margin-top: 30px;
+      }
+
+      .about .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+      }
+
+      .about .left .image {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        background-color: royalblue;
+        background-image: url(assets/ball-306820_1280.webp);
+        background-position: center;
+        background-size: contain;
+        border-radius: 50%;
+      }
+
+      .about .right {
+        margin-top: 100px;
+        margin-right: 100px;
+        padding-left: 30px;
+      }
+
+      .about .right h1 {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Lorem.</a></li>
+        <li><a href="#">Lorem.</a></li>
+      </ul>
+      <div class="circle">
+        <span id="icon"></span>
+      </div>
+    </div>
+
+    <div class="banner">
+    </div>
+
+    <section class="about">
+      <div class="left">
+        <div class="image"></div>
+      </div>
+      <div class="right">
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, quasi dolores officiis atque sapiente accusantium dolore molestias eveniet sed qui voluptatibus commodi voluptatem. Ab cum temporibus necessitatibus dolore tempore sint natus nam voluptate ipsa accusantium odio, itaque soluta quibusdam, ullam deserunt delectus excepturi minima velit nostrum atque recusandae! Cum, officiis.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const icon = document.getElementById("icon");
+
+      icon.addEventListener("click", function () {
+        this.classList.toggle("dark");
+        document.querySelector(".circle").classList.toggle("dark");
+        document.querySelector("body").classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>

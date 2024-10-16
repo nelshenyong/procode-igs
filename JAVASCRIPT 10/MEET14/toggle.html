@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+    <style>
+        .circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 80px;
+            font-size: 50px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        body {
+            background-color: rgb(232, 232, 232);
+            transition: ease-in 0.1s;
+        }
+        
+        body.dark {
+            background-color: rgb(24, 29, 49);
+        }
+
+        .circle.dark {
+            background-color: rgb(37, 40, 59);
+        }
+
+        .circle span#icon::after {
+            content: "☀️";
+        }
+        .circle span#icon.dark::after {
+            content: "🌙";
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <span id="icon"></span>
+    </div>
+
+    <script>
+        const icon = document.getElementById("icon");
+
+        icon.addEventListener('click', function(){
+            this.classList.toggle('dark');
+            document.querySelector('.circle').classList.toggle('dark');
+            document.querySelector('body').classList.toggle('dark');
+        })
+
+        // icon.addEventListener('click', () => {
+        //     icon.classList.toggle('dark');
+        // })
+    </script>
+</body>
+</html>

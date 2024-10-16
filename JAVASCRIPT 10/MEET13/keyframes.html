@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyframe</title>
+    <style>
+      @keyframes myAnimation {
+        from {
+          /* transform: translate(x); */
+          top: 100px;
+          left: 100px;
+        }
+
+        to {
+          /* transform: translateX(200px); */
+          top: 100px;
+          left: 300px;
+        }
+      }
+
+      @keyframes myAnimation2nd {
+        0% {
+          /* transform: translate(x); */
+          top: 100px;
+          left: 100px;
+          background-color: red;
+        }
+
+        25% {
+          /* transform: translateX(200px); */
+          top: 100px;
+          left: 500px;
+          transform: scale(5);
+          background-color: green;
+        }
+
+        50% {
+          /* transform: translateX(200px); */
+          top: 500px;
+          left: 500px;
+          transform: scale(3);
+          background-color: blue;
+        }
+
+        75% {
+          /* transform: translateX(200px); */
+          top: 500px;
+          left: 100px;
+          transform: scale(5);
+          background-color: purple;
+        }
+
+        100% {
+          /* transform: translateX(200px); */
+          top: 100px;
+          left: 100px;
+          transform: scale(1);
+          background-color: red;
+        }
+      }
+
+      div.box {
+        position: relative;
+        background-color: salmon;
+        height: 50px;
+        width: 50px;
+        /* top: 200px;
+          left: 100px; */
+        animation: myAnimation 5s infinite;
+      }
+
+      div.box {
+        position: relative;
+        background-color: salmon;
+        height: 50px;
+        width: 50px;
+        /* top: 200px;
+          left: 100px; */
+        animation: myAnimation 5s infinite;
+      }
+
+      div.box2 {
+        position: relative;
+        background-color: red;
+        height: 50px;
+        width: 50px;
+        animation: myAnimation2nd;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box2"></div>
+  </body>
+</html>

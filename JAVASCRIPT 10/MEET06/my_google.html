@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Search</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        font-size: 60px;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-top: 200px;
+      }
+
+      form {
+        width: 800px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      form div {
+        display: inline-block;
+        border: 1px solid black;
+        padding: 5px 10px;
+        height: 36px;
+        border-radius: 18px;
+      }
+
+      form input[type="text"] {
+        border: none;
+        outline: none;
+        width: 500px;
+      }
+
+      form input[type="submit"] {
+        height: 36px;
+        width: 36px;
+        border-radius: 18px;
+        background-color: gray;
+        border: none;
+        cursor: pointer;
+      }
+
+      nav {
+        padding: 10px;
+        max-width: 100%;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        float: right;
+        margin-right: 10px;
+        line-height: 30px;
+        height: 30px;
+      }
+
+      nav ul li a {
+        font-size: 10px;
+        display: block;
+        padding: 0 10px;
+        color: #333;
+        text-decoration: none;
+        border-radius: 3px;
+        line-height: 30px;
+        height: 100%;
+      }
+
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      nav ul li .circle {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      @media (max-width: 800px) {
+        header nav {
+          float: right;
+        }
+
+        header nav a {
+          margin: 0 5px 0 0;
+        }
+
+        form {
+          width: 80%;
+        }
+
+        form div {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        form input[type="text"] {
+          width: 70%;
+          max-width: 500px;
+        }
+
+        section.clear {
+          clear: both;
+        }
+
+        .labs,
+        .box {
+          display: none;
+        }
+
+        .submit {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://myaccount.google.com/"
+              ><img src="profile.jpeg" alt="Profile" class="circle"
+            /></a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.google.co.id/intl/en/about/products?tab=rh"
+              class="box"
+              >📦</a
+            >
+          </li>
+          <li><a href="https://labs.google.com/search/" class="labs">🧪</a></li>
+          <li>
+            <a
+              href="https://www.google.com/imghp?hl=en&tab=ri&ogbl"
+              class="image"
+              >Images</a
+            >
+          </li>
+          <li>
+            <a href="https://mail.google.com/mail/" class="gmail">Gmail</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="clear"></section>
+    </header>
+    <h1>
+      <span style="color: #4285f4">G</span><span style="color: #db4437">o</span
+      ><span style="color: #f4b400">o</span><span style="color: #4285f4">g</span
+      ><span style="color: #0f9d58">l</span
+      ><span style="color: #db4437">e</span>
+    </h1>
+    <form action="https://www.google.com/search" target="_blank">
+      <div>
+        <span class="icon-search">🔎</span>
+        <input
+          type="text"
+          name="q"
+          id=""
+          placeholder="Search Google or type a url"
+        />
+      </div>
+      <input type="submit" value="🔘" class="submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I love you</title>
+    <style>
+      body {
+        background-image: url(assets/painting-mountain-lake-with-mountain-background_188544-9126.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        width: 300px;
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+      "
+    ></div>
+    <h1>Wait 3 Second</h1>
+    <button>I can't wait !!!</button>
+    <script>
+      let counter = 3;
+      const h1Text = document.querySelector("h1");
+      const interval = setInterval(() => {
+        counter--;
+        h1Text.innerHTML = `Wait ${counter} Second`;
+      }, 1000);
+      const alaram = setTimeout(() => {
+        clearInterval(interval);
+        document.querySelector("h1").innerHTML = "I Love You 3000 💓";
+        document.querySelector("button").style.display = "none";
+      }, 3000);
+      document.querySelector("div").style.backgroundImage =
+          "url(download.jpeg)";
+
+      document.querySelector("button").addEventListener("click", () => {
+        clearInterval(interval);
+        clearTimeout(alaram);
+        document.querySelector("h1").innerHTML = "Yaaaaa..... 😭😭";
+        document.querySelector("button").style.display = "none";
+        document.querySelector("div").style.backgroundImage =
+          "url(images.jpeg)";
+      });
+    </script>
+  </body>
+</html>

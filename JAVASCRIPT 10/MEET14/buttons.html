@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons</title>
+  </head>
+  <body>
+    <script>
+      const background = document.body;
+      function redBg() {
+        background.style.backgroundColor = "red";
+      }
+      const greenBg = function () {
+        background.style.backgroundColor = "green";
+      };
+      const blueBg = () => {
+        background.style.backgroundColor = "blue";
+      };
+      const resetBtn = () => {
+        background.style.backgroundColor = "white";
+      };
+    </script>
+
+    <button onclick="redBg()">Red</button>
+    <button onclick="greenBg()">Green</button>
+    <button onclick="blueBg()">Blue</button>
+    <button id="resetBtn">Reset</button>
+    <button id="randomBtn">Random</button>
+    <button id="randomImageBg">Random Img</button>
+
+    <script>
+      document.getElementById("resetBtn").addEventListener("click", resetBtn);
+      document.getElementById("resetBtn").addEventListener("click", () => {
+        background.style.backgroundColor = ``;
+        background.style.backgroundImage = ``;
+      });
+
+      // document.getElementById("randomBtn").addEventListener("click", () => {
+      //   const r = Math.floor(Math.random() * 256);
+      //   const g = Math.floor(Math.random() * 256);
+      //   const b = Math.floor(Math.random() * 256);
+      //   background.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      // });
+
+      function getRandomNumber(number) {
+        return Math.floor(Math.random() * number); // 0 s.d. n-1
+      }
+
+      function randomBg() {
+        let rgb = [
+          getRandomNumber(256),
+          getRandomNumber(256),
+          getRandomNumber(256),
+        ];
+        console.log(rgb);
+        background.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+      }
+
+      document.getElementById("randomBtn").onclick = randomBg;
+
+      document.getElementById("randomImageBg").addEventListener("click", () => {
+        const randomImage = Math.floor(Math.random() * 3 + 1);
+        background.style.backgroundImage = `url(assets/${randomImage}.jpg)`;
+        background.style.backgroundSize = "cover";
+      });
+    </script>
+  </body>
+</html>

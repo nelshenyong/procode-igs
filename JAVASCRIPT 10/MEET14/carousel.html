@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-image: url(assets/bg.gif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    div.container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div.container div.background-blur {
+      position: absolute;
+      width: 400px;
+      height: 500px;
+      background-color: brown;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.159);
+      border-radius: 30px;
+      padding: 20px;
+      z-index: 998;
+    }
+
+    div.container div.container-fill h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      margin-bottom: 50px;
+    }
+
+    div.container div.container-fill {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      z-index: 999;
+    }
+
+    div.container div.container-fill div.carousel {
+      width: 300px;
+      height: 150px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: salmon;
+      border: 3px solid rgb(255, 255, 255);
+      border-radius: 20px;
+      position: relative;
+    }
+
+    div.container div.container-fill div.btn-group {
+      margin-top: 40px;
+    }
+
+    div.container div.container-fill div.btn-group button {
+      border: none;
+      background-color: rgb(117, 117, 169);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    @keyframes slideInFromLeft {
+      from {
+        left: -120vh;
+      }
+      to {
+        left: 0vh;
+      }
+    }
+
+    @keyframes slideOutToLeft {
+      from {
+        left: 0vh;
+      }
+      to {
+        left: -120vh;
+      }
+    }
+
+    @keyframes slideInFromRight {
+      from {
+        left: 120vh;
+      }
+      to {
+        left: 0vh;
+      }
+    }
+
+    @keyframes slideOutToRight {
+      from {
+        left: 0vh;
+      }
+      to {
+        left: 120vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="background-blur"></div>
+    <div class="container-fill">
+      <h1>CAROUSEL</h1>
+      <div class="carousel"></div>
+      <div class="btn-group">
+        <button id="previousBtn">Prev</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const images = ["assets/1.jpg", "assets/2.jpg", "assets/3.jpg"];
+
+    let index = 0;
+    let carouselEl = document.querySelector(".carousel");
+    carouselEl.style.backgroundImage = `url(${images[index]})`;
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      index++;
+      if (index >= images.length) {
+        index = 0;
+      }
+      carouselEl.style.backgroundImage = `url(${images[index]})`;
+      carouselEl.style.animation = "slideOutToRight 0.2s ease-in-out forwards";
+      setTimeout(() => {
+        carouselEl.style.animation = "slideInFromLeft 0.5s ease-in-out forwards";
+      }, 1000);
+    });
+
+    document.getElementById("previousBtn").addEventListener("click", () => {
+      index--;
+      if (index <= 0) {
+        index = images.length - 1;
+      }
+      carouselEl.style.backgroundImage = `url(${images[index]})`;
+      carouselEl.style.animation = "slideOutToLeft 0.2s ease-in-out forwards";
+      setTimeout(() => {
+        carouselEl.style.animation = "slideInFromRight 0.5s ease-in-out forwards";
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

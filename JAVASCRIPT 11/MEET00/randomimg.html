@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>randomimg</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: block;
+        position: relative;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      nav {
+        background-color: red;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>Navbar</nav>
+    <script>
+      let images = [
+        "assets/black_hoodie_boy_skin_base.png",
+        "assets/Migration_Migrator_Cape_Scarf_Slime.png",
+        "assets/Nice_boy_with_headphones_and_scarf.png",
+      ];
+      let random = Math.floor(Math.random() * images.length);
+      let image = document.createElement("img");
+      image.src = images[random];
+      document.body.append(image);
+    </script>
+  </body>
+</html>

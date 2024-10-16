@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Script</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        #green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1><h1>
+    <h1 class="red"></h1>
+    <h1 id="green"></h1>
+
+    <script>
+        var username = prompt("Who are you?")
+        var myHeading = document.querySelector("h1");
+        myHeading.innerHTML = `Hi, ${username}!`;
+        myHeading.style.color = "Salmon"
+        myHeading.style.textAlign = "center"
+
+        document.querySelector(".red").innerHTML = "WOW!";
+        // document.querySelector("#green").innerHTML = "YES!";
+        document.getElementById("green").innerHTML = "YES!";
+
+        var newHeading = document.createElement("h1");
+        newHeading.innerHTML = "New Heading!";
+
+        document.body.append(newHeading);
+
+        // Create Paragraph
+        var newParagraph = document.createElement("p");
+        newParagraph.innerHTML = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, culpa.";
+
+        document.body.append(newParagraph);
+    </script>
+</body>
+</html>

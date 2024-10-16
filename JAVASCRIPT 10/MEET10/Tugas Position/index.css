@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 200vh;
+}
+
+header {
+  position: relative;
+}
+
+header .content {
+  display: flex;
+  justify-content: center;
+  gap: 400px;
+  background-color: rgb(40, 55, 129);
+  padding: 20px;
+}
+
+header .content .flag a {
+  display: flex;
+  text-decoration: none;
+  width: 17px;
+  gap: 20px;
+}
+
+header .content .text a {
+  margin-left: 20px;
+  color: rgb(186, 186, 186);
+  text-decoration: none;
+}
+
+header .content .text a.regis {
+  border: 2px solid rgb(101, 190, 101);
+  padding: 20px;
+  background-color: rgb(101, 190, 101);
+  color: white;
+  font-weight: bold;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+header nav img {
+  width: 200px;
+  height: auto;
+}
+
+header nav .text-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+header nav .text-2 a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+header nav .text-2 i {
+  color: white;
+}

@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(assets/bg-main.jpg);
+}
+
+div.container {
+  width: 80%;
+  min-height: 100vh;
+  background-color: yellowgreen;
+  margin: 0 auto;
+}
+
+div.container header.header-container {
+  padding: 20px;
+  background-color: rgb(194, 13, 13);
+  height: 70px;
+  line-height: 70px;
+  padding: 0px 20px;
+}
+
+div.cotainer header nav.top {
+  background-color: whitesmoke;
+  width: fit-content;
+}
+
+div.container header nav.top a {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+div.container header nav.top a:hover {
+  background-color: rgba(128, 128, 128, 0.413);
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+div.container section.hero {
+  height: 400px;
+  /* background-color: yellow; */
+  background-image: url(assets/bg.jpg);
+  text-align: center;
+  padding-top: 120px;
+}
+
+h1.title-hero,
+h3.subtitle-hero {
+  margin-bottom: 10px;
+}
+
+a.sign-up-btn {
+  display: inline-block;
+  height: 48px;
+  margin-top: 15px;
+  padding: 0 25px;
+  background-color: cyan;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  line-height: 48px;
+  border-radius: 30px;
+}
+
+div.container section.content {
+  background-color: magenta;
+}
+
+div.container section.content article {
+  float: left;
+  width: 70%;
+  min-height: 800px;
+  background-color: white;
+}
+
+div.container section.content article header.header-article {
+  background-color: bisque;
+  padding: 15px 0;
+}
+
+div.container section.content article header.header-article h1 {
+  font-size: 24pt;
+}
+
+div.container section.content article header.header-article p {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+div.container section.content article section.article img {
+  width: 100px;
+  float: left;
+}
+
+div.container section.content article section.article p {
+  text-align: justify;
+  text-indent: 45px;
+  margin-bottom: 15px;
+}
+
+div.container section.content aside {
+  float: right;
+  width: 20%;
+  min-height: 800px;
+  background-color: rgb(0, 217, 255);
+}

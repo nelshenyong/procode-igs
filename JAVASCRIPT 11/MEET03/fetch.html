@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+        }
+        .content {
+            text-align: center;
+            margin: 20px;
+        }
+        .nav-button {
+            font-size: 2rem;
+            cursor: pointer;
+            user-select: none;
+            padding: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+        #image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            width: 120px; 
+            height: 120px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="left" class="nav-button">◀️</button>
+        <div class="content">
+            <h1 id="title"></h1>
+            <img src="" alt="" id="image" />
+            <p id="description"></p>
+        </div>
+        <button id="right" class="nav-button">▶️</button>
+        <img id="loading" src="assets/gif/loading.gif" alt="Loading...">
+    </div>
+    <script>
+        async function fetchData(url) {
+            try {
+                const response = await fetch(url);
+                return await response.json();
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        function updateContent(pokemon) {
+            document.getElementById("title").textContent = pokemon.name;
+            document.getElementById("image").src = pokemon.sprites.front_default;
+            document.getElementById("description").textContent = pokemon.types.map(type => type.type.name).join(', ');
+        }
+
+        async function loadPokemon(index) {
+            document.getElementById("loading").style.display = 'block';
+            const url = `https://pokeapi.co/api/v2/pokemon/${index}`;
+            const data = await fetchData(url);
+            updateContent(data);
+            document.getElementById("loading").style.display = 'none';
+        }
+
+        let currentIndex = 1;
+
+        document.getElementById("right").addEventListener('click', () => {
+            currentIndex++;
+            loadPokemon(currentIndex);
+        });
+
+        document.getElementById("left").addEventListener('click', () => {
+            if (currentIndex > 1) {
+                currentIndex--;
+                loadPokemon(currentIndex);
+            }
+        });
+
+        loadPokemon(currentIndex);
+    </script>
+</body>
+</html>

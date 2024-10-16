@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is It Christmas?</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            margin: 15%;
+            font-size: 300px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="ans"></h1>
+    <script>
+        const today = new Date();
+        console.log(today.getDate());
+        console.log(today.getMonth());
+
+        if (today.getDate() === 25 && today.getMonth() === 11){
+            document.getElementById("ans").innerHTML = "YES";
+        }
+        else {
+            document.getElementById("ans").innerHTML = "NO";
+        }
+    </script>
+</body>
+</html>

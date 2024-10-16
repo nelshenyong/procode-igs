@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(Assets/types-bg-gold-dragon.webp);
+  min-height: 1000px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  position: relative;
+}
+
+header .header-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header .header-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-container .container-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.header-container .img {
+  width: 250px;
+  height: 250px;
+}
+.header-container .button {
+  text-align: center;
+}
+
+.header-container .button a {
+  text-decoration: none;
+  color: white;
+  padding: 16px 48px;
+  border: 2px solid white;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.header-container .button a:hover {
+  background-color: white;
+  color: #272727;
+}
+
+.header-container .img.img1 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(Assets/gold-dragon-logo.webp);
+}
+
+.header-container .img.img2 {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(Assets/neverstopflying_2.webp);
+}
+
+header nav {
+  background-color: #272727;
+  display: flex;
+  justify-content: center;
+  gap: 800px;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav img {
+  width: 50px;
+  height: 50px;
+}
+
+header nav .nav-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+header nav .nav-container a {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+header nav .nav-container a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+header nav .nav-container .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

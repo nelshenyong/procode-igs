@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planet</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        background-image: url(assets/pexels-photo-537027.webp);
+        background-position: center;
+        background-size: cover;
+      }
+
+      .sun {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border-radius: 50%;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        animation: rotateSun 10s linear infinite;
+        background-image: url(assets/sun.jpeg);
+        background-position: center;
+        background-size: cover;
+        box-shadow: orange 0 0 30px;
+      }
+
+      .earth {
+        width: 50px;
+        height: 50px;
+        background-color: #00aaff;
+        border-radius: 50%;
+        position: absolute;
+        background-image: url(assets/la-terre-avec-nuages-15646.jpg);
+        background-position: right;
+        background-size: cover;
+        animation: orbitEarth 10s linear infinite;
+        box-shadow: cadetblue 0 0 30px;
+      }
+
+      @keyframes rotateSun {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes orbitEarth {
+        from {
+          transform: rotate(0deg) translateX(150px) rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) translateX(150px) rotate(360deg);
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="sun"></div>
+    <div class="earth"></div>
+  </body>
+</html>
