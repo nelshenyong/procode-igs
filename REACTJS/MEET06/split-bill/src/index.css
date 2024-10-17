@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 :root {
-  --color-lightest : #e6e5e0;
-  --color-light : #c5d1dd;
-  --color-medium : #a4bcd4;
-  --color-dark : #616974;
+  --color-lightest: #e6e5e0;
+  --color-light: #c5d1dd;
+  --color-medium: #a4bcd4;
+  --color-dark: #616974;
 }
 
 * {
@@ -70,7 +70,8 @@ body {
   transition: 0.5s;
 }
 
-.selected, .sidebar li:hover {
+.selected,
+.sidebar li:hover {
   background-color: var(--color-lightest);
 }
 
